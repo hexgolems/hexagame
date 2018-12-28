@@ -2,7 +2,7 @@ extern crate amethyst;
 
 use amethyst::{
     prelude::*,
-    renderer::{DisplayConfig, DrawFlat2D, Pipeline, PosNormTex, RenderBundle, Stage},
+    renderer::{DisplayConfig, DrawFlat2D, Pipeline,  RenderBundle, Stage},
     utils::application_root_dir,
     core::transform::TransformBundle,
     input::InputBundle,
@@ -10,14 +10,15 @@ use amethyst::{
 };
 
 mod hexagame;
-use crate::hexagame::Hexagame;
 mod systems; // Import the module
+mod components;
 
+use crate::hexagame::Hexagame;
 
 
 fn main() -> amethyst::Result<()> {
     amethyst::start_logger(Default::default());
-    let root_dir = application_root_dir().unwrap().to_str().unwrap().to_string();
+    let root_dir = application_root_dir();
     let display_path = format!( "{}/resources/display_config.ron", &root_dir);
     let binding_path = format!( "{}/resources/bindings.ron", &root_dir);
 

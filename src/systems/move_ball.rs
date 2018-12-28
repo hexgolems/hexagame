@@ -4,7 +4,7 @@ use amethyst::{
     ecs::prelude::{Join, Read, ReadStorage, System, WriteStorage},
 };
 
-use crate::hexagame::Ball;
+use crate::components::Ball;
 
 pub struct MoveBallsSystem;
 

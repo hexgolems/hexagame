@@ -3,7 +3,9 @@ use amethyst::{
     ecs::prelude::{Join, ReadStorage, System, WriteStorage},
 };
 
-use crate::hexagame::{Ball, Side, Paddle, ARENA_HEIGHT};
+use crate::hexagame::{ARENA_HEIGHT};
+use crate::components::Ball;
+use crate::components::{Side, Paddle};
 
 pub struct BounceSystem;
 

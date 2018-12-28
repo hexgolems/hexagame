@@ -4,7 +4,8 @@ use amethyst::{
     ui::UiText,
 };
 
-use crate::hexagame::{Ball, ARENA_WIDTH, ScoreBoard, ScoreText};
+use crate::hexagame::{ARENA_WIDTH, ScoreBoard, ScoreText};
+use crate::components::Ball;
 
 pub struct WinnerSystem;
 
